@@ -78,14 +78,17 @@ def main():
 
     # Compute Harris corner response
     response = harris_corners(img, window_size, sensitivity)
+    print("Computed Harris response")
 
     # Threshold on response
     threshed_response = response.copy()
     threshed_response[threshed_response <
                       threshold * threshed_response.max()] = 0
+    print("Thresholded Harris response")
 
     # Perform non-max suppression by finding peak local maximum
     corners = peak_local_max(threshed_response, min_distance=window_size)
+    print("Found corner points")
 
     # Visualize results (in 3 subplots in the same figure)
     fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2)
