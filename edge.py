@@ -15,7 +15,7 @@ def gradient_magnitude(x_derived_img, y_derived_img):
 
 
 def main():
-    image_name = 'images/iguana'
+    image_name = 'iguana'
 
     # Load image
     img = io.imread(image_name + '.png', as_gray=True)

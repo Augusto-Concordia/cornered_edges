@@ -67,7 +67,7 @@ def harris_corners(img, window_size=3, k=0.04):
 
 
 def main():
-    img = imread('images/building.jpg', as_gray=True)
+    img = imread('building.jpg', as_gray=True)
 
     # YOUR CODE HERE
 
