@@ -74,7 +74,7 @@ def main():
     # settings specific to the "building.jpg" image
     window_size = 3
     sensitivity = 0.05
-    threshold = 0.001
+    threshold = 0.0007
 
     # Compute Harris corner response
     response = harris_corners(img, window_size, sensitivity)
@@ -91,19 +91,16 @@ def main():
     print("Found corner points")
 
     # Visualize results (in 3 subplots in the same figure)
-    fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2)
-    ax1.imshow(1 - img, cmap='Greys')
-    ax1.set_title('Original Image')
+    fig, (ax1, ax2, ax3) = plt.subplots(1, 3)
+    ax1.imshow(response, cmap='inferno')
+    ax1.set_title('Harris Response')
 
-    ax2.imshow(response, cmap='inferno')
-    ax2.set_title('Harris Response')
+    ax2.imshow(threshed_response, cmap='inferno')
+    ax2.set_title('Thresholded Harris Response')
 
-    ax3.imshow(threshed_response, cmap='inferno')
-    ax3.set_title('Thresholded Harris Response')
-
-    ax4.imshow(1 - img, cmap='Greys')
-    ax4.plot(corners[:, 1], corners[:, 0], 'r+', markersize=5)
-    ax4.set_title('Corners')
+    ax3.imshow(1 - img, cmap='Greys')
+    ax3.plot(corners[:, 1], corners[:, 0], 'r+', markersize=5)
+    ax3.set_title('Corners')
 
     plt.show()
 
