@@ -34,7 +34,7 @@ def main():
     magnitude_img = gradient_magnitude(x_derived_img, y_derived_img)
 
     # Visualize results
-    fig, (ax1, ax2, ax3) = plt.subplots(1, 3)
+    fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(16, 4))
     ax1.imshow(x_derived_img, cmap='gray')
     ax1.set_title('X derived image')
     ax2.imshow(y_derived_img, cmap='gray')

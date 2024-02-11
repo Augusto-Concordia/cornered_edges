@@ -91,7 +91,7 @@ def main():
     print("Found corner points")
 
     # Visualize results (in 3 subplots in the same figure)
-    fig, (ax1, ax2, ax3) = plt.subplots(1, 3)
+    fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(16, 4))
     ax1.imshow(response, cmap='inferno')
     ax1.set_title('Harris Response')
 
