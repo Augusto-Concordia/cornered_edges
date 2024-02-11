@@ -94,13 +94,16 @@ def main():
     fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(16, 4))
     ax1.imshow(response, cmap='inferno')
     ax1.set_title('Harris Response')
+    ax1.axis('off')
 
     ax2.imshow(threshed_response, cmap='inferno')
     ax2.set_title('Thresholded Harris Response')
+    ax2.axis('off')
 
     ax3.imshow(1 - img, cmap='Greys')
     ax3.plot(corners[:, 1], corners[:, 0], 'r+', markersize=5)
     ax3.set_title('Corners')
+    ax3.axis('off')
 
     plt.show()
 

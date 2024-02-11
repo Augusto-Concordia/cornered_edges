@@ -37,10 +37,16 @@ def main():
     fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(16, 4))
     ax1.imshow(x_derived_img, cmap='gray')
     ax1.set_title('X derived image')
+    ax1.axis('off')
+
     ax2.imshow(y_derived_img, cmap='gray')
     ax2.set_title('Y derived image')
+    ax2.axis('off')
+
     ax3.imshow(magnitude_img, cmap='gray')
     ax3.set_title('Gradient magnitude')
+    ax3.axis('off')
+
     plt.show()
 
     # END YOUR CODE
