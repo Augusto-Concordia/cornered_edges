@@ -86,6 +86,7 @@ def partial_x(img):
 
     # Defines a Sobel x-derivative filter
     filter = np.array([[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]])
+    # Defines a simple x-derivative filter
     # filter = np.array([[0, 0, 0], [-1, 0, 1], [0, 0, 0]])
 
     # Applies it
@@ -111,6 +112,7 @@ def partial_y(img):
 
     # Defines a Sobel y-derivative filter
     filter = np.array([[-1, -2, -1], [0, 0, 0], [1, 2, 1]])
+    # Defines a simple y-derivative filter
     # filter = np.array([[0, -1, 0], [0, 0, 0], [0, 1, 0]])
 
     # Applies it
