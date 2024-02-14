@@ -1,7 +1,7 @@
 import numpy as np
 from utils import filter2d, gaussian_kernel, partial_x, partial_y, zero_pad
 from skimage.feature import peak_local_max
-from skimage.io import imread, imsave
+from skimage.io import imread
 import matplotlib.pyplot as plt
 
 
@@ -9,13 +9,6 @@ def show_img(img):
     plt.imshow(img, cmap='Greys')
 
     plt.show()
-
-
-def save_img(img, name: str, is_float: bool = True):
-    if (is_float):
-        img = (img * 255).astype('uint8')
-
-    imsave(name, img)
 
 
 def harris_corners(img, window_size=3, k=0.04):
